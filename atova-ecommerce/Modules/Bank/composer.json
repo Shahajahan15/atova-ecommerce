@@ -1,0 +1,15 @@
+{
+    "name": "nwidart/bank",
+    "description": "",
+    "authors": [
+        {
+            "name": "Nicolas Widart",
+            "email": "n.widart@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Modules\\Bank\\": ""
+        }
+    }
+}

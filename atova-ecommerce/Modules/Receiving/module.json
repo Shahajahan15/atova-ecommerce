@@ -1,0 +1,16 @@
+{
+    "name": "Receiving",
+    "alias": "receiving",
+    "description": "",
+    "keywords": [],
+    "active": 1,
+    "order": 0,
+    "providers": [
+        "Modules\\Receiving\\Providers\\ReceivingServiceProvider"
+    ],
+    "aliases": {},
+    "files": [
+        "start.php"
+    ],
+    "requires": []
+}

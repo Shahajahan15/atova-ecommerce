@@ -1,0 +1,35 @@
+<?php
+
+namespace Modules\Expenditure\Entities;
+
+use Illuminate\Database\Eloquent\Model;
+
+class PaymentMethod extends Model
+{
+    public $timestamps      = false;
+    protected $table        = "acc__payment_methods";
+
+    protected $fillable = ['title', 'note'];
+
+    public static function arrList()
+    {
+        $methods = PaymentMethod::all();
+        $arr = array();
+        foreach ($methods as $method) {
+            $arr[$method->id] = $method->title;
+        }
+        return $arr;
+    }
+
+
+    /**
+     * For payments
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function expenses()
+    {
+        return $this->hasMany('Modules\Expenditure\Entities\Expense', 'payment_methods_id', 'id');
+    }
+
+
+}
